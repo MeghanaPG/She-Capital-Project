@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>My app</title>
+    <script>
+      function handleClick(){
+        //Create a new window to add some content inside that 
+        var newWindow = window.open('', '', 'width=500,heigth=500,left=500,top=100');
+       
+        // Adding content to the new window
+        newWindow.document.write('<html><head><title>KPI Metrics</title></head>');
+        newWindow.document.write('<h1>Let us learn about KPT Metrics</h1>');
+        // newWindow.document.write('<h2>Volume</h2>');
+        newWindow.document.write('<p style="line-height:2.5;"> There are several key performance metrics that are commonly used to assess market performance, including:<br>Market indices: A market index is a measure of the performance of a group of stocks that represent a particular market or sector. Some commonly used indices include the S&P 500, Dow Jones Industrial Average, and NASDAQ Composite.<br>Market capitalization: This metric refers to the total value of a company\'s outstanding shares. It is calculated by multiplying the number of outstanding shares by the current market price per share.<br>Trading volume: This refers to the total number of shares traded in a particular period. It is a measure of market liquidity and investor interest.<br>Price-to-earnings (P/E) ratio: This is a valuation ratio that compares a company\'s current stock price to its earnings per share (EPS). A high P/E ratio suggests that investors are optimistic about a company\'s future earnings potential, while a low P/E ratio suggests the opposite.<br>Dividend yield: This metric measures the amount of dividends paid out by a company relative to its share price. It is a measure of a company\'s ability to generate income for its shareholders.<br>Return on investment (ROI): This metric measures the return on investment for a particular stock or portfolio. It is calculated by dividing the profit or loss by the initial investment, expressed as a percentage.<br>Volatility: This refers to the degree of fluctuation in a stock or market\'s price over time. High volatility suggests greater risk and uncertainty, while low volatility suggests greater stability.<br>These metrics can be used individually or in combination to assess market performance and make investment decisions.</p>');
+
+      }
+      function handleClick1(){
+         //Create a new window to add some content inside that 
+         var newWindow = window.open('', '', 'width=500,heigth=500,left=500,top=100');
+
+         // Adding content to the new window
+        newWindow.document.write('<html><head><title>Investment</title></head>');
+        newWindow.document.write('<h1>Here\'s our list of companies based on your response</h1>');
+        // newWindow.document.write('<button onclick="handleClickGo()">G0</button>');
+        const myButton = newWindow.document.createElement('button');
+        newWindow.document.write('<div class="my-button">');
+        newWindow.document.write('<img src="99ccff.png" style="max-width: 100%; height: auto;">');
+        // myButton.className = 'my-button';
+        myButton.textContent = 'GO';
+        myButton.addEventListener('click', handleClickGo);
+        newWindow.document.body.appendChild(myButton);
+      }    
+      function handleClickGo(){
+        var newWindow = window.open('', '', 'width=500,heigth=500,left=500,top=100');
+        newWindow.document.write('<a href= "https://app.powerbi.com/view?r=eyJrIjoiOGYzMTlkNjQtMzcwZS00Y2UwLTlhMmYtY2U3OWJmNzE1MjgzIiwidCI6ImI1YjhhNzg4LTFmZjctNGU5ZC1iZGEwLWJmOTYzYmMwN2Q1OSJ9" ></a>');
+        
+      }
+    </script>
+    <style>
+      h1{
+        text-align: center;
+      }
+      .button-container {
+      position: absolute;
+      bottom: -5px;
+      width: 100%;
+      text-align: center;
+      left: 50px;
+      transform: translateX(-50%);
+      white-space: nowrap;
+    }
+
+    button {
+      display: inline-block;
+      position: relative;
+      padding: 10px 20px;
+      border: none;
+      background-color: #99ccff;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-right: 10px;
+    }  
+    </style>
+  </head>
+  <body>
+    <my-app>Loading...</my-app>
+    <div class="button-conatiner">
+    <button onclick="handleClick()">GET STARTED!</button>
+    <button onclick="handleClick1()">Ready to Invest!</button>
+    <img src="https://media.bizj.us/view/img/10105727/women-in-finance-woman-ascending-coin-staircase*1200xx3050-1718-0-15.jpg">
+  </body>
+</html>
